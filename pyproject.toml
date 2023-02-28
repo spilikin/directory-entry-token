@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "directory-entry-token"
+version = "0.1.0"
+description = "PoC for Directory Entry Token as QR-Code"
+authors = ["Sergej Suskov <sergej.suskov@gematik.de>"]
+readme = "README.adoc"
+packages = [{include = "directory_entry_token"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jwcrypto = "^1.4.2"
+pydantic = "^1.10.5"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

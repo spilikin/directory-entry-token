@@ -1,0 +1,23 @@
+= 🎟️ PoC for Directory Entry Token
+
+[source,bash]
+----
+poetry update
+ENTRY_TOKEN=$(poetry run python directory_entry_token/sign.py)
+echo ${ENTRY_TOKEN}
+poetry run python directory_entry_token/verify.py ${ENTRY_TOKEN}
+----
+
+[source,json]
+----
+{
+  "app":"oci",
+  "iat":1677585128,
+  "mail":"carina.meyer@praxis.kim.telematik",
+  "name":"Praxis Dr.med. Carina Meyer",
+  "sub":"1-20802376487",
+  "v":"1"
+}
+----
+
+image::qr-code-sample.png[]
